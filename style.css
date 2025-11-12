@@ -1,0 +1,193 @@
+/* General Reset and Background */
+body {
+    background-color: #0a0a0a; /* Deep dark background */
+    color: #ffd700; /* Gold/Yellow text color */
+    font-family: 'Roboto Mono', monospace; /* A common coding font */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* You must ensure the path to your binary background image is correct */
+    background-image: url('images/binary-background.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Header (Top Bar) */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top-icon img, .social-icons img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    /* Filter to turn icons gold/yellow */
+    filter: invert(70%) sepia(80%) saturate(1000%) hue-rotate(10deg) brightness(100%) contrast(100%); 
+    margin: 0 5px;
+}
+
+/* Center Content Area */
+.center-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- FIX FOR THE OVERLAP ISSUE --- */
+/* 1. Container for the logo and the 'ACCESSING' text */
+.logo-area {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers them horizontally */
+    margin-bottom: 20px;
+}
+
+/* 2. Style for the 'ACCESSING TUTORING HUB...' text */
+.access-message {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    /* Ensure no positioning conflict */
+    position: static; 
+}
+
+/* 3. Style for the main logo image */
+.main-logo {
+    max-width: 500px; /* Adjust size as needed */
+    height: auto;
+    /* Ensure no positioning conflict */
+    position: static; 
+}
+/* ---------------------------------- */
+
+
+/* Booting/System Box */
+.boot-box {
+    border: 2px solid #ffd700;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    padding: 20px;
+    text-align: left;
+    white-space: pre-line; 
+    font-size: 1em;
+    margin-left: 200px; /* Pushes the box to the right side of the screen as in your image */
+    max-width: 400px;
+    align-self: flex-end; /* Ensures it stays to the right within the center-section */
+}
+
+.success {
+    color: #39ff14; /* Neon green color */
+    font-weight: bold;
+}
+
+/* Separator Line */
+.separator {
+    border: none;
+    border-top: 2px solid #ffd700;
+    width: 70%;
+    margin: 40px 0;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 2px solid #ffd700;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    text-shadow: 0 0 5px #ffd700;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: #ffd700;
+    color: #0a0a0a;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #ffd700;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px #ffd700;
+}
+
+/* Popular Section Title */
+.popular-section-title {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: 3px solid #ffd700;
+    margin-bottom: 30px;
+}
+
+/* --- Content Card Styles (for POPULAR section) --- */
+.popular-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content-card {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid #ffd700;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #ffd700;
+}
+
+.card-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.content-card h3 {
+    color: #39ff14;
+    margin-top: 5px;
+}
+
+.content-card p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.card-info span {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    color: #ffaa00;
+}
+
+.card-btn {
+    padding: 8px 20px; 
+    margin-top: 15px;
+    display: inline-block;
+}
